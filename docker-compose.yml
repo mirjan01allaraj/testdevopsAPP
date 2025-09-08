@@ -1,22 +1,14 @@
+version: '3'
 services:
   web:
     build: .
     ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    env_file:
-      - .env
-
+      - "8080:80"
   db:
-    image: postgres:15
-    restart: always
+    image: postgres
     environment:
-      POSTGRES_DB: devops_db
-      POSTGRES_USER: devops_user
-      POSTGRES_PASSWORD: devops_pass
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-volumes:
-  pgdata:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
