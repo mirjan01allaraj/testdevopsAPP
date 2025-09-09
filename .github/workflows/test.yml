@@ -22,7 +22,7 @@ jobs:
           cd webapp
           npm install
 
-      - name: Run tests
+      - name: Run Jest tests directly
         run: |
           cd webapp
-          npm test
+          ./node_modules/.bin/jest
