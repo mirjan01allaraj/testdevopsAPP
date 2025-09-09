@@ -25,4 +25,4 @@ jobs:
       - name: Run Jest tests via npx
         run: |
           cd webapp
-          npx test
+          npx jest
