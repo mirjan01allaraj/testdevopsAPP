@@ -20,3 +20,9 @@ jobs:
 
       - name: Save image for local use
         run: docker save testdevopsapp -o testdevopsapp.tar
+
+      - name: Upload Docker image artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: testdevopsapp-image
+          path: testdevopsapp.tar
