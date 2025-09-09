@@ -1,0 +1,11 @@
+{
+  "name": "devops-demo",
+  "version": "1.0.0",
+  "description": "Aplikacion i thjeshtë web për demonstrim DevOps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ti",
+  "license": "MIT"
+}
