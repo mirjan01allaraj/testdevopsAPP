@@ -22,7 +22,7 @@ jobs:
         run: docker save testdevopsapp -o testdevopsapp.tar
 
       - name: Archive entire project (including hidden files)
-        run: tar -cvf full-project.tar . --exclude=full-project.tar
+        run: tar --exclude=full-project.tar -cvf full-project.tar .
 
       - name: Upload full project archive
         uses: actions/upload-artifact@v4
