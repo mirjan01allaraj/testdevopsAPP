@@ -7,3 +7,5 @@ fetch('data.json')
   .catch(error => {
     console.error('Gabim gjatë ngarkimit të JSON:', error);
   });
+
+
