@@ -21,8 +21,13 @@ jobs:
         run: |
           cd webapp
           npm install
-
-      - name: Run Jest tests via npx
+    
+      - name: Fix Jest permissions
         run: |
           cd webapp
-          npx jest
+          chmod +x ./node_modules/.bin/jest
+
+      - name: Run Jest tests 
+        run: |
+          cd webapp
+          npx --no-install jest
